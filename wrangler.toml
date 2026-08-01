@@ -1,0 +1,23 @@
+name = "techvista"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+
+# Non-secret defaults only. NEVER put real API keys in this file —
+# wrangler.toml is meant to be committed to git.
+#
+# For local development, put real secrets in `.dev.vars` (gitignored,
+# auto-loaded by `wrangler dev`, never committed). Copy `.dev.vars.example`
+# to `.dev.vars` and fill in your real keys there instead.
+#
+# For a real deployment, use `wrangler secret put GROQ_API_KEY` etc.
+# instead of putting secrets in [vars] at all — secrets set this way are
+# encrypted and never appear in `wrangler.toml` or in `wrangler dev` output.
+[vars]
+GROQ_MODEL = "llama"
+GROQ_FALLBACK_MODEL = "llama-large"
+ELEVENLABS_VOICE_ID = ""
+DEFAULT_LANGUAGE = "en"
+SUPPORTED_LANGUAGES = "en,es,ta,te,hi"
+LATENCY_TARGET_MS = "2000"
+LOW_CONFIDENCE_THRESHOLD = "0.75"
+ENABLE_GLM_EVALUATION = "false"
